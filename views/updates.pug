@@ -1,0 +1,25 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body     
+       h1= title
+
+                form(action="/update-cobj" method="POST" class="form-container")
+                    label(for="Name") Name:
+                    input(type="text" id="name" name="name" required)
+                    
+                    label(for="Descripton") Description:
+                    input(type="text" id="description" name="description" required)
+                    
+                    label(for="Price") Pricing:
+                    input(type="number" min="0" max="10000" step="1" id="price" name="price" required)
+                    
+                    label(for="FoodID") Food Unique ID:
+                    input(type="number" min="0" max="10000" step="1" id="foodid" name="foodid" required)
+
+                    button(type="submit") Create/Update Record
+
+                    a(href="/" class="buttonHref") Home

@@ -1,0 +1,24 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body   
+        h1= title
+  
+            table
+                thead
+                    tr
+                        th Name
+                        th Description
+                        th Price
+                        th Food ID*
+                            tbody
+                            each record in data
+                                tr  
+                                td= record.properties.name
+                                td= record.properties.description
+                                td= record.properties.price
+                                td= record.properties.foodid
+        a(href="/update-cobj" class="buttonHref") Create/Update Record
